@@ -1,0 +1,1058 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="12fe583b-c3a0-45de-973e-cfc6e9ee291c" name="Default" comment="" />
+    <ignored path="CommandMobs.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="CommandMobs" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="BMCommands.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/BMCommands.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="57" selection-start="3406" selection-end="3406" vertical-scroll-proportion="0.0" vertical-offset="1309" max-vertical-offset="4913">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mob.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/Mob.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="335" column="0" selection-start="11013" selection-end="11013" vertical-scroll-proportion="-12.076923" vertical-offset="4531" max-vertical-offset="5202">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MobsManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/MobsManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="30" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0" vertical-offset="1848" max-vertical-offset="2550">
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#383#391#0" expanded="false" />
+                <element signature="e#2698#2699#0" expanded="false" />
+                <element signature="e#2732#2733#0" expanded="false" />
+                <element signature="e#3467#3468#0" expanded="false" />
+                <element signature="e#3495#3496#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="132" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Msgs.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/Msgs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="88" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomBat.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomBat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="32" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.49804688" vertical-offset="85" max-vertical-offset="646">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntityUtils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/EntityUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="55" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="3825">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VaultHook.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/VaultHook.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="39" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0" vertical-offset="161" max-vertical-offset="850">
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParseItems.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/ParseItems.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="48" selection-start="1867" selection-end="1867" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="5236">
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#673#684#0" expanded="false" />
+                <element signature="e#802#833#0" expanded="false" />
+                <element signature="e#2014#2045#0" expanded="false" />
+                <element signature="e#6241#6255#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandMobs.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/CommandMobs.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="8" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="969">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/CustomWither.java" />
+        <option value="$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/VaultHook.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomCaveSpider.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomChicken.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomCow.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomEnderDragon.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomEnderman.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomGhast.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomGiant.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomHorse.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomIronGolem.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomMagma.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomMushroomCow.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomOcelot.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomPig.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomPigZombie.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomSheep.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomSilverfish.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomSkeleton.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomSlime.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomSnowman.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomSpider.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomSquid.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomVillager.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomWitch.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomWither.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomWolf.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomZombie.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomBlaze.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomWitherSkeleton.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/NMSHandler.java" />
+        <option value="$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/NMSHandler.java" />
+        <option value="$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/CustomWitherSkeleton.java" />
+        <option value="$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/CommandMobs.java" />
+        <option value="$PROJECT_DIR$/Plugin/src/main/resources/plugin.yml" />
+        <option value="$PROJECT_DIR$/Plugin/src/main/resources/messages.yml" />
+        <option value="$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/MobsManager.java" />
+        <option value="$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/ParseItems.java" />
+        <option value="$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/MobManagerListener.java" />
+        <option value="$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/EntityUtils.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomCreeper.java" />
+        <option value="$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/CustomCreeper.java" />
+        <option value="$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/CustomEnderDragon.java" />
+        <option value="$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/CustomEnderman.java" />
+        <option value="$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/CustomEndermite.java" />
+        <option value="$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/BMCommands.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/EntityUtils.java" />
+        <option value="$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/Mob.java" />
+        <option value="$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/Utils.java" />
+        <option value="$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/Msgs.java" />
+        <option value="$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomBat.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CommandMobs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="rippin.bullyscraft.nms.v1_8_R1.Entities" />
+      <recent name="rippin.bullyscraft.nms.v1_7_R4.Entities" />
+      <recent name="rippin.bullyscraft.com.nms.v1_8_R1" />
+      <recent name="rippin.bullyscraft.commandmobs.Entities" />
+      <recent name="rippin.bullyscraft.commandmobs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Development\java\CommandMobs\v1_8_R1\src\main\java\rippin\bullyscraft\com\nms\v1_8_R1" />
+      <recent name="F:\Development\java\CommandMobs\v1_8_R1\src\main\java" />
+      <recent name="F:\Development\java\CommandMobs" />
+      <recent name="F:\Development\java\CommandMobs\v1_7_R4\src\main\java\rippin\bullyscraft\nms\v1_7_R4" />
+      <recent name="F:\Development\java\CommandMobs\Plugin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Development\java\CommandMobs\Plugin\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Maven.Unnamed">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unnamed" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Maven.Unnamed" />
+    </list>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="12fe583b-c3a0-45de-973e-cfc6e9ee291c" name="Default" comment="" />
+      <created>1421562015544</created>
+      <updated>1421562015544</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39892906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2353362" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25367156" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32931727" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USERS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomZombie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="9" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomWitherSkeleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="58" selection-start="729" selection-end="729" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/NMSHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="49" selection-start="2668" selection-end="2668" vertical-scroll-proportion="0.0" vertical-offset="244" max-vertical-offset="833">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/CustomWitherSkeleton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="52" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/New folder/BuildTools/CraftBukkit/src/main/java/net/minecraft/server/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="47175" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/TeleportMobCountdown.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="13" selection-start="55" selection-end="55" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plugin/src/main/resources/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="27" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plugin/src/main/resources/messages.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="2014" selection-end="2031" vertical-scroll-proportion="0.0" vertical-offset="298" max-vertical-offset="867">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/Configs/ConfigManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/Configs/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0" vertical-offset="261" max-vertical-offset="1258">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/MobManagerListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="52" selection-start="4771" selection-end="4771" vertical-scroll-proportion="0.0" vertical-offset="1194" max-vertical-offset="1972">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/NMSHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="82" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/CustomBat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/CustomCow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomBlaze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="30" selection-start="427" selection-end="427" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomCaveSpider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="9" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomChicken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="9" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomCow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="9" selection-start="1074" selection-end="1074" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomCreeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomEnderDragon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="9" selection-start="1106" selection-end="1106" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomEnderman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="9" selection-start="1094" selection-end="1094" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomGhast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="13" selection-start="1103" selection-end="1103" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomGiant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="9" selection-start="1094" selection-end="1094" vertical-scroll-proportion="0.0" vertical-offset="23" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomHorse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="1176" selection-end="1231" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomIronGolem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="9" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomMagma.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="9" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomMushroomCow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomOcelot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomPig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomPigZombie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomSheep.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomSilverfish.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="333" selection-end="333" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomSlime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/CustomCreeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="55" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/CustomEnderDragon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="55" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/CustomEnderman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="55" selection-start="488" selection-end="488" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/CustomEndermite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="55" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/CustomEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="17" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/CustomGhast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_8_R1/src/main/java/rippin/bullyscraft/nms/v1_8_R1/Entities/EntityUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="67" selection-start="1840" selection-end="1840" vertical-scroll-proportion="0.0" vertical-offset="1564" max-vertical-offset="5389">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/CommandMobs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="8" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/BMCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="57" selection-start="3406" selection-end="3406" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="4692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/VaultHook.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="39" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="850">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/ParseItems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="48" selection-start="1867" selection-end="1867" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="5236">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#673#684#0" expanded="false" />
+            <element signature="e#802#833#0" expanded="false" />
+            <element signature="e#2014#2045#0" expanded="false" />
+            <element signature="e#6241#6255#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/EntityUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="55" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="3825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/MobsManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="30" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2550">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#383#391#0" expanded="false" />
+            <element signature="e#2698#2699#0" expanded="false" />
+            <element signature="e#2732#2733#0" expanded="false" />
+            <element signature="e#3467#3468#0" expanded="false" />
+            <element signature="e#3495#3496#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/Mob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="335" column="0" selection-start="11013" selection-end="11013" vertical-scroll-proportion="-12.076923" vertical-offset="4531" max-vertical-offset="5202">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/Msgs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="88" selection-start="498" selection-end="498" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Plugin/src/main/java/rippin/bullyscraft/commandmobs/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="132" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/v1_7_R4/src/main/java/rippin/bullyscraft/nms/v1_7_R4/Entities/CustomBat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="32" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.49804688" vertical-offset="85" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>v1_7_R4</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: org.spigot:spigot-api:1.8.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+

@@ -1,0 +1,20 @@
+main: rippin.bullyscraft.commandmobs.CommandMobs
+name: CommandMobs
+version: '${project.version}'
+description: Something...
+softdepend: [Clearlag, Vault]
+
+commands:
+  commandmobs:
+    description: All commandmobs commands.
+    aliases: [cm, mobs]
+    permission: commandmobs.admin
+    usage: 'Usage: /cm help'
+
+
+  permissions:
+    commandmobs.admin:
+      description: Permission for the commandmobs command.
+      default: op
+
+

@@ -1,0 +1,45 @@
+# Placeholders %mobname% %playername%
+
+Not-Enough-Money: '&4You do not have enough money to use this mob.'
+No-Permission-For-Mob-Usage: '&4You do not have permission to use this commandmob.'
+
+Set-Weapon: '&6Weapon has been set for %mobname%'
+Set-Armor: '&6Armor has been set for %mobname%'
+Set-Name: '&6Name has been set for %mobname%'
+Set-Baby: '&6Baby has been set for %mobname%'
+Set-Permission: '&6Permission has been set for %mobname%'
+Remove-Permission: '&4Permission removed for %mobname%'
+Set-Sound: '&6Sound has been set for %mobname%'
+Set-Type: '&6Entity type has been set for %mobname%'
+Set-Cost: '&6Cost has been set for %mobname%'
+Add-Command: '&6Command has been added for %mobname%'
+Clear-Commands: '&4Commands have been cleared for %mobname%'
+Active-Mobs-List: '&7=============Active Mobs=============='
+Active-Mobs-List-Format: '&6Mob: %mobname%'
+All-Mobs-List: '&7=============All Mobs=============='
+All-Mobs-List-Format: '&6Mob: %mobname%'
+Teleport-To-Mob: "&6You have been tp'd to %mobname%'s location."
+Spawn-Mob: '&6Mob %mobname% has been spawned'
+Despawn-Mob: '&4Mob %mobname% has been despawned'
+Spawn-Error-Type: "Failed to spawn %mobname% because entity type is null."
+Spawn-Error-Loc: "Failed to spawn %mobname% because location is null."
+
+Mob-Created: |
+ &6Mob has been succesfully created.
+ &6do &a/cm help &6to set the remaining characteristics for a mob.
+Mob-Deleted: '&4%mobname% has been deleted.'
+Mob-Already-Exists: '&4That mob already exists.'
+#Test
+Move-Mob: '&6You have set mob %mobname% to your location. &4Note: &6Mob, will only be moved if active, but location will be set.'
+Move-Mob-Error: '&4Mob: %mobname% does not exist.'
+Not-Armor-Material: '&4That is not an armor Material.'
+Not-A-Material: '&4Not a item Material.'
+Not-A-Mob-Error: '&4That is not a valid command mob.'
+Mob-is-Disabled: '&4%mobname% is disabled. enable it with /cm name enable'
+Not-A-Active-Mob-Error: '&4%mobname% is not an active commandmob.'
+Already-A-Active-Mob: '&4%mobname% is already active.'
+Set-CommandSender: '&4Set commandsender for %mobname%.'
+
+
+#
+Reload-Configs: '&aConfigs have been reloaded.'
