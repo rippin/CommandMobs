@@ -13,6 +13,7 @@ public class CustomWitherSkeleton extends EntitySkeleton implements CustomEntity
     public CustomWitherSkeleton(World world)
     {
         super(world);
+        this.fireProof = true;
         try{
             Field bField = PathfinderGoalSelector.class.getDeclaredField("b");
             bField.setAccessible(true);

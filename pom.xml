@@ -16,9 +16,9 @@
     </modules>
 
     <repositories>
-    <repository><id>third-party</id>
-        <url>http://168.235.64.202:8069/nexus/content/repositories/thirdparty/</url>
-    </repository>
+        <repository><id>third-party</id>
+            <url>http://168.235.64.202:8069/nexus/content/repositories/thirdparty/</url>
+        </repository>
     </repositories>
 
 </project>

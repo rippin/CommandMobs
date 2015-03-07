@@ -143,11 +143,11 @@ public class BMCommands implements CommandExecutor {
             }
             return true;
         }
-        if (args.length == 3) {
-            runCommand(args, commandSender);
-            return true;
+            if (args.length == 3) {
+                runCommand(args, commandSender);
             }
-        else if (args.length >= 3){
+
+          else if (args.length > 2){
             if (MobsManager.getMob(args[0]) != null) {
                 Mob m = MobsManager.getMob(args[0]);
             if (args[1].equalsIgnoreCase("addCommand")){
@@ -158,9 +158,19 @@ public class BMCommands implements CommandExecutor {
                 m.addCommand(concat.trim());
                 commandSender.sendMessage(Msgs.messages.get("Add-Command").replace("%mobname%", args[0]));
             }
-          }
-           return true;
-        }
+               else if (args[1].equalsIgnoreCase("setName")){
+                    String concat = "";
+                    for (int i = 2; i <= args.length - 1; i++){
+                        concat += " " + args[i];
+                    }
+                    m.setDisplayName(concat.trim());
+                    commandSender.sendMessage(Msgs.messages.get("Set-Name").replace("%mobname%", args[0]));
+                    }
+                 }
+                return true;
+              }
+
+
 
         }
         return false;
@@ -173,10 +183,6 @@ public class BMCommands implements CommandExecutor {
             if (args[1].equalsIgnoreCase("settype")) {
                 m.setType(args[2]);
             sender.sendMessage(Msgs.messages.get("Set-Type").replace("%mobname%", m.getName()));
-            }
-            else if (args[1].equalsIgnoreCase("setName")){
-                m.setDisplayName(args[2]);
-                sender.sendMessage(Msgs.messages.get("Set-Name").replace("%mobname%", m.getName()));
             }
             else if (args[1].equalsIgnoreCase("setPermission")){
                 m.setPermission(args[2]);

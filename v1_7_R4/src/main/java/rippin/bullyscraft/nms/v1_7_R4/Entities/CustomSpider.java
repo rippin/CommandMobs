@@ -13,6 +13,7 @@ public class CustomSpider extends EntityZombie implements CustomEntity {
     public CustomSpider(World world)
     {
         super(world);
+        this.fireProof = true;
         try{
             Field bField = PathfinderGoalSelector.class.getDeclaredField("b");
             bField.setAccessible(true);

@@ -3,13 +3,11 @@ package rippin.bullyscraft.commandmobs;
 import org.bukkit.Bukkit;
 import org.bukkit.Chunk;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.CreatureSpawnEvent;
-import org.bukkit.event.entity.EntityCombustEvent;
-import org.bukkit.event.entity.EntityDamageEvent;
-import org.bukkit.event.entity.EntityTargetEvent;
+import org.bukkit.event.entity.*;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.world.ChunkUnloadEvent;
 
@@ -30,6 +28,60 @@ public class MobManagerListener implements Listener {
                 }
             }
         }
+    }
+
+    @EventHandler (priority = EventPriority.HIGHEST)
+    public void onEntityDamageByEntity(EntityDamageByEntityEvent event){
+        if (event.getEntity() instanceof  LivingEntity && event.getDamager() instanceof Player){
+            Player player = (Player) event.getDamager();
+            for (String key : MobsManager.getActiveMobs()){
+                String split[] = key.split(":");
+                String uuid = split[0];
+                if (event.getEntity().getUniqueId().toString().equalsIgnoreCase(uuid)){
+                    Mob m = MobsManager.getMobByUUID(uuid);
+                    if (m == null) {
+                        return;
+                    }
+                    if (m.getPermission() == null || player.hasPermission(m.getPermission())) {
+                        if (m.getAmount() > 0 && VaultHook.hasAmount((Player)event.getDamager(), m.getAmount())) {
+                            VaultHook.deductAmount(player, m.getAmount());
+                        }
+                        else if (m.getAmount() > 0 && (!VaultHook.hasAmount(player, m.getAmount()))) {
+                            player.sendMessage(Msgs.messages.get("Not-Enough-Money").replace("%player%", player.getName()));
+                            return;
+                        }
+                        if (m.getCooldownUUIDS().containsKey(player.getUniqueId().toString())){
+                            long lastTime = m.getCooldownUUIDS().get(player.getUniqueId().toString());
+                            long cooldown = (m.getCooldown() * 1000);
+                            if (System.currentTimeMillis() - lastTime < cooldown){
+                                return;
+                            }
+                        }
+                        m.getCooldownUUIDS().put(player.getUniqueId().toString(), System.currentTimeMillis());
+
+                        if (m.getSound() != null){
+                            player.playSound(player.getLocation(), m.getSound(), 10, 1);
+                        }
+                        if (m.getCommands() != null && !m.getCommands().isEmpty()){
+
+                            if (m.isCommandAsConsole()) {
+                                for (String cmds : m.getCommands()) {
+                                    Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), cmds.replace("%player%", player.getName()));
+                                }
+                            } else {
+                                for (String cmds : m.getCommands()) {
+                                    Bukkit.getServer().dispatchCommand(player, cmds.replace("%player%", player.getName()));
+                                }
+                            }
+                        }
+                    }
+                    else {
+                        player.sendMessage(Msgs.messages.get("No-Permission-For-Mob-Usage").replace("%player%", player.getName()));
+                    }
+                }
+            }
+        }
+
     }
 
     @EventHandler (priority = EventPriority.HIGHEST)
@@ -83,11 +135,21 @@ public class MobManagerListener implements Listener {
                             event.getPlayer().sendMessage(Msgs.messages.get("Not-Enough-Money").replace("%player%", event.getPlayer().getName()));
                             return;
                        }
+                       if (m.getCooldownUUIDS().containsKey(event.getPlayer().getUniqueId().toString())){
+                           long lastTime = m.getCooldownUUIDS().get(event.getPlayer().getUniqueId().toString());
+                           long cooldown = (m.getCooldown() * 1000);
+                           if (System.currentTimeMillis() - lastTime < cooldown){
+                               return;
+                           }
+                       }
+                           m.getCooldownUUIDS().put(event.getPlayer().getUniqueId().toString(), System.currentTimeMillis());
+
                      if (m.getSound() != null){
                        event.getPlayer().playSound(event.getPlayer().getLocation(), m.getSound(), 10, 1);
                      }
                      if (m.getCommands() != null && !m.getCommands().isEmpty()){
-                           if (m.isCommandAsConsole()) {
+
+                            if (m.isCommandAsConsole()) {
                             for (String cmds : m.getCommands()) {
                             Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), cmds.replace("%player%", event.getPlayer().getName()));
                          }
@@ -96,7 +158,7 @@ public class MobManagerListener implements Listener {
                                    Bukkit.getServer().dispatchCommand(event.getPlayer(), cmds.replace("%player%", event.getPlayer().getName()));
                                }
                            }
-                      }
+                     }
                     }
                     else {
                         event.getPlayer().sendMessage(Msgs.messages.get("No-Permission-For-Mob-Usage").replace("%player%", event.getPlayer().getName()));

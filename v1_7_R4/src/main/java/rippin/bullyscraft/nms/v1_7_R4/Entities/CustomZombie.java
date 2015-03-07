@@ -14,6 +14,7 @@ public class CustomZombie extends EntityZombie implements CustomEntity {
     public CustomZombie(World world)
     {
         super(world);
+        this.fireProof = true;
         try{
             Field bField = PathfinderGoalSelector.class.getDeclaredField("b");
             bField.setAccessible(true);

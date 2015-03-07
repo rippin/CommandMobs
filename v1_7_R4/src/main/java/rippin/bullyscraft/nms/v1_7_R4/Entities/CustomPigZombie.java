@@ -14,6 +14,7 @@ public class CustomPigZombie extends EntityPigZombie implements CustomEntity {
     public CustomPigZombie(World world)
     {
         super(world);
+        this.fireProof = true;
 
         try{
             Field bField = PathfinderGoalSelector.class.getDeclaredField("b");

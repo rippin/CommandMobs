@@ -44,8 +44,12 @@ public class ParseItems {
         }
         if (isArmor(item.toString())) {
         if (item.getType().toString().toLowerCase().contains("leather")){
-            LeatherArmorMeta meta = (LeatherArmorMeta) item;
-            color = "LeatherColor:" + meta.getColor().toString();
+            if (item.getItemMeta() != null) {
+            LeatherArmorMeta meta = (LeatherArmorMeta) item.getItemMeta();
+                if (meta.getColor() != null) {
+                color = "LeatherColor:" + meta.getColor().toString();
+                }
+              }
             }
         }
         return new String(item.getType().toString() + ":"
@@ -111,7 +115,7 @@ public class ParseItems {
                     else if (splitspace[j].toLowerCase().contains("LeatherColor".toLowerCase())){
                         if (isArmor(i.toString())) {
                             if (i.getType().toString().toLowerCase().contains("leather")){
-                                LeatherArmorMeta leatherArmorMeta = (LeatherArmorMeta) i;
+                                LeatherArmorMeta leatherArmorMeta = (LeatherArmorMeta) i.getItemMeta();
                                 leatherArmorMeta.setColor(getFromString(splitspace[j]));
                                 i.setItemMeta(leatherArmorMeta);
 

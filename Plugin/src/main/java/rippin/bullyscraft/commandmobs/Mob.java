@@ -15,10 +15,7 @@ import rippin.bullyscraft.commandmobs.Configs.MobsConfig;
 
 
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Mob {
     private String name;
@@ -39,6 +36,8 @@ public class Mob {
     private Location loc;
     private boolean enable = false;
     private boolean commandAsConsole = true;
+    private int cooldown;
+    private Map<String, Long> cooldownUUIDS = new HashMap<String, Long>();
 
     public Mob(String name){
         this.name = name;
@@ -56,6 +55,12 @@ public class Mob {
         if (config.getInt("Mobs." + name + ".Cost") > 0)
             amount = config.getInt("Mobs." + name + ".Cost");
             commandAsConsole = config.getBoolean("Mobs." + name + ".CommandAsConsole");
+        if (config.getInt("Mobs." + name + ".Cooldown") > 0){
+            cooldown = config.getInt("Mobs." + name + ".Cooldown");
+        }
+        else {
+            cooldown = 5;
+        }
 
         if (config.getString("Mobs." + name + ".Weapon") != null)
         weapon = ParseItems.parseItems(config.getString("Mobs." + name + ".Weapon"));
@@ -348,5 +353,22 @@ public class Mob {
         this.commandAsConsole = commandAsConsole;
         config.set("Mobs." + name + ".CommandAsConsole", this.commandAsConsole);
         MobsConfig.saveFile();
+    }
+
+    public int getCooldown() {
+        return cooldown;
+    }
+
+    public void setCooldown(int cooldown) {
+        this.cooldown = cooldown;
+        config.set("Mobs." + name + ".Cooldown", this.cooldown);
+    }
+
+    public Map<String, Long> getCooldownUUIDS() {
+        return cooldownUUIDS;
+    }
+
+    public void setCooldownUUIDS(Map<String, Long> cooldownUUIDS) {
+        this.cooldownUUIDS = cooldownUUIDS;
     }
 }

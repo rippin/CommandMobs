@@ -12,7 +12,7 @@ import java.util.HashMap;
        public static void loadMessages(){
         messages.clear();
            for (String key : MessagesConfig.getConfig().getKeys(true)){
-           messages.put(key, ChatColor.translateAlternateColorCodes('&', Utils.prefix + MessagesConfig.getConfig().getString(key)));
+           messages.put(key, Utils.prefix + ChatColor.translateAlternateColorCodes('&', MessagesConfig.getConfig().getString(key)));
        }
       }
 
