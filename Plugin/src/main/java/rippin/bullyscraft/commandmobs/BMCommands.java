@@ -23,7 +23,6 @@ public class BMCommands implements CommandExecutor {
          this.plugin = plugin;
      }
 
-    @Override
     public boolean onCommand(CommandSender commandSender, Command cmd, String s, String[] args) {
         if (cmd.getName().equalsIgnoreCase("commandmobs")) {
         if (args.length == 1){
