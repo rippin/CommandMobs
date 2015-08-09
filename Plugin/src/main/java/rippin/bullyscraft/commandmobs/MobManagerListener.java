@@ -39,6 +39,7 @@ public class MobManagerListener implements Listener {
                 String uuid = split[0];
                 if (event.getEntity().getUniqueId().toString().equalsIgnoreCase(uuid)){
                     Mob m = MobsManager.getMobByUUID(uuid);
+                    event.setCancelled(true);
                     if (m == null) {
                         return;
                     }
