@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.Chunk;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
+import org.bukkit.entity.Villager;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -160,6 +161,10 @@ public class MobManagerListener implements Listener {
                                }
                            }
                      }
+                        if (event.getRightClicked() instanceof Villager){
+                            event.setCancelled(true);
+                            return;
+                        }
                     }
                     else {
                         event.getPlayer().sendMessage(Msgs.messages.get("No-Permission-For-Mob-Usage").replace("%player%", event.getPlayer().getName()));
