@@ -1,5 +1,6 @@
 package rippin.bullyscraft.commandmobs;
 
+import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.command.Command;
@@ -31,12 +32,37 @@ public class BMCommands implements CommandExecutor {
                 commandSender.sendMessage(Msgs.messages.get("Reload-Configs"));
             }
             else if (args[0].equalsIgnoreCase("help")){
-               //TODO Add help commands.
+                commandSender.sendMessage(ChatColor.GREEN + "/cm list active|all");
+                commandSender.sendMessage(ChatColor.GREEN + "/cm create [name]");
+                commandSender.sendMessage(ChatColor.GREEN + "/cm delete|remove [name]");
+                commandSender.sendMessage(ChatColor.GREEN + "/cm move|setlocation [name]");
+                commandSender.sendMessage(ChatColor.GREEN + "/cm tp|teleport [name]");
+                commandSender.sendMessage(ChatColor.GREEN + "/cm [name] spawn");
+                commandSender.sendMessage(ChatColor.GREEN + "/cm [name] despawn");
+                commandSender.sendMessage(ChatColor.GREEN + "/cm [name] setPermission [permission]");
+                commandSender.sendMessage(ChatColor.GREEN + "/cm [name] removePermission");
+                commandSender.sendMessage(ChatColor.RED + "/cm help 2 {To continue}");
+
+
             }
             return true;
         }
         else if (args.length == 2){
-            if (args[0].equalsIgnoreCase("list")){
+            if (args[0].equalsIgnoreCase("help")){
+                if (args[1].equalsIgnoreCase("2")){
+                    commandSender.sendMessage(ChatColor.GREEN + "/cm [name] setName [ args[] ]");
+                    commandSender.sendMessage(ChatColor.GREEN + "/cm [name] setType [EntityType]");
+                    commandSender.sendMessage(ChatColor.GREEN + "/cm [name] setSound [Sound]");
+                    commandSender.sendMessage(ChatColor.GREEN + "/cm [name] setBaby {Only if ageable}");
+                    commandSender.sendMessage(ChatColor.GREEN + "/cm [name] setCost [integer]");
+                    commandSender.sendMessage(ChatColor.GREEN + "/cm [name] setWeapon hand|Material");
+                    commandSender.sendMessage(ChatColor.GREEN + "/cm [name] setArmor slot|Material");
+                    commandSender.sendMessage(ChatColor.GREEN + "/cm [name] setCommandSender player|console {Command run as player or console.}");
+                    commandSender.sendMessage(ChatColor.GREEN + "/cm [name] addCommand [ args[] ]");
+                    commandSender.sendMessage(ChatColor.GREEN + "/cm clearcommands [name]");
+                }
+            }
+           else  if (args[0].equalsIgnoreCase("list")){
                 if (args[1].equalsIgnoreCase("active")){
                 commandSender.sendMessage(Msgs.messages.get("Active-Mobs-List"));
                     for (String m : MobsManager.getActiveMobs()){
@@ -142,33 +168,33 @@ public class BMCommands implements CommandExecutor {
             }
             return true;
         }
-            if (args.length == 3) {
-                runCommand(args, commandSender);
-            }
-
-          else if (args.length > 2){
+        else if (args.length > 2){
             if (MobsManager.getMob(args[0]) != null) {
                 Mob m = MobsManager.getMob(args[0]);
-            if (args[1].equalsIgnoreCase("addCommand")){
-               String concat = "";
-                for (int i = 2; i <= args.length - 1; i++){
-                    concat += " " + args[i];
+                if (args[1].equalsIgnoreCase("addCommand")){
+                    String concat = "";
+                    for (int i = 2; i <= args.length - 1; i++){
+                        concat += " " + args[i];
+                    }
+                    m.addCommand(concat.trim());
+                    commandSender.sendMessage(Msgs.messages.get("Add-Command").replace("%mobname%", args[0]));
                 }
-                m.addCommand(concat.trim());
-                commandSender.sendMessage(Msgs.messages.get("Add-Command").replace("%mobname%", args[0]));
-            }
-               else if (args[1].equalsIgnoreCase("setName")){
+                else if (args[1].equalsIgnoreCase("setName")){
                     String concat = "";
                     for (int i = 2; i <= args.length - 1; i++){
                         concat += " " + args[i];
                     }
                     m.setDisplayName(concat.trim());
                     commandSender.sendMessage(Msgs.messages.get("Set-Name").replace("%mobname%", args[0]));
-                    }
-                 }
-                return true;
-              }
-
+                }
+            }
+            return true;
+        }
+            if (args.length == 3) {
+                if (runCommand(args, commandSender)){
+                    return  true;
+                }
+            }
 
 
         }
@@ -176,7 +202,7 @@ public class BMCommands implements CommandExecutor {
 
     }
 
-    private static void runCommand(String[] args, CommandSender sender){
+    private static boolean runCommand(String[] args, CommandSender sender){
         if (MobsManager.getMob(args[0]) != null) {
             Mob m = MobsManager.getMob(args[0]);
             if (args[1].equalsIgnoreCase("settype")) {
@@ -213,10 +239,6 @@ public class BMCommands implements CommandExecutor {
             else if (args[1].equalsIgnoreCase("setCost")){
                 m.setAmount(Integer.parseInt(args[2]));
                 sender.sendMessage(Msgs.messages.get("Set-Cost").replace("%mobname%", m.getName()));
-            }
-            else if (args[1].equalsIgnoreCase("addCommand")){
-                m.addCommand(args[2]);
-                sender.sendMessage(Msgs.messages.get("add-Command"));
             }
             else if (args[1].equalsIgnoreCase("setweapon")) {
                 if (m != null || m.getEnt() != null){
@@ -279,9 +301,11 @@ public class BMCommands implements CommandExecutor {
                     }
                 }
             }
+            return  true;
         }
             else {
             sender.sendMessage(Msgs.messages.get("Not-A-Mob-Error").replace("%mobname%", args[0])); // not a valid mob
+            return  true;
         }
     }
 
