@@ -35,8 +35,8 @@ public class BMCommands implements CommandExecutor {
                 commandSender.sendMessage(ChatColor.GREEN + "/cm list active|all");
                 commandSender.sendMessage(ChatColor.GREEN + "/cm create [name]");
                 commandSender.sendMessage(ChatColor.GREEN + "/cm delete|remove [name]");
-                commandSender.sendMessage(ChatColor.GREEN + "/cm move|setlocation [name]");
-                commandSender.sendMessage(ChatColor.GREEN + "/cm tp|teleport [name]");
+                commandSender.sendMessage(ChatColor.GREEN + "/cm [name] move|setlocation ");
+                commandSender.sendMessage(ChatColor.GREEN + "/cm [name] tp|teleport");
                 commandSender.sendMessage(ChatColor.GREEN + "/cm [name] spawn");
                 commandSender.sendMessage(ChatColor.GREEN + "/cm [name] despawn");
                 commandSender.sendMessage(ChatColor.GREEN + "/cm [name] setPermission [permission]");
@@ -88,23 +88,24 @@ public class BMCommands implements CommandExecutor {
             }
             else if (args[0].equalsIgnoreCase("delete") || args[0].equalsIgnoreCase("remove")){
                 if (MobsManager.isMob(args[1])){
-                    if (MobsManager.isActiveMob(args[0]))
-                        MobsManager.removeActiveMob(args[0]);
-                    MobsConfig.getConfig().set("Mobs." + args[0], null);
-                    commandSender.sendMessage(Msgs.messages.get("Mob-Deleted").replace("%mobname%", args[0]));
+                    if (MobsManager.isActiveMob(args[1]))
+                        MobsManager.removeActiveMob(args[1]);
+                    MobsConfig.getConfig().set("Mobs." + args[1], null);
+                    MobsConfig.saveFile();
+                    commandSender.sendMessage(Msgs.messages.get("Mob-Deleted").replace("%mobname%", args[1]));
                 }
                 else {
-                    commandSender.sendMessage(Msgs.messages.get("Not-A-Mob-Error").replace("%mobname%", args[0]));
+                    commandSender.sendMessage(Msgs.messages.get("Not-A-Mob-Error").replace("%mobname%", args[1]));
                 }
             }
             else if (args[0].equalsIgnoreCase("clearCommands")){
                 if (MobsManager.isMob(args[1])){
                     Mob m = MobsManager.getMob(args[1]);
                     m.setCommands(new ArrayList<String>());
-                    commandSender.sendMessage(Msgs.messages.get("Clear-Commands").replace("%mobname%", args[0]));
+                    commandSender.sendMessage(Msgs.messages.get("Clear-Commands").replace("%mobname%", args[1]));
                 }
                 else {
-                    commandSender.sendMessage(Msgs.messages.get("Not-A-Mob-Error").replace("%mobname%", args[0]));
+                    commandSender.sendMessage(Msgs.messages.get("Not-A-Mob-Error").replace("%mobname%", args[1]));
                 }
             }
 
@@ -178,6 +179,7 @@ public class BMCommands implements CommandExecutor {
                     }
                     m.addCommand(concat.trim());
                     commandSender.sendMessage(Msgs.messages.get("Add-Command").replace("%mobname%", args[0]));
+                    return true;
                 }
                 else if (args[1].equalsIgnoreCase("setName")){
                     String concat = "";
@@ -186,9 +188,9 @@ public class BMCommands implements CommandExecutor {
                     }
                     m.setDisplayName(concat.trim());
                     commandSender.sendMessage(Msgs.messages.get("Set-Name").replace("%mobname%", args[0]));
+                    return true;
                 }
             }
-            return true;
         }
             if (args.length == 3) {
                 if (runCommand(args, commandSender)){
