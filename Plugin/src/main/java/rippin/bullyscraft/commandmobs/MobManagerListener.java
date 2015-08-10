@@ -129,6 +129,9 @@ public class MobManagerListener implements Listener {
                     if (m == null) {
                         return;
                     }
+                    if (m.getEnt() instanceof Villager){
+                        event.setCancelled(true);
+                    }
                     if (m.getPermission() == null || event.getPlayer().hasPermission(m.getPermission())) {
                     if (m.getAmount() > 0 && VaultHook.hasAmount(event.getPlayer(), m.getAmount())) {
                        VaultHook.deductAmount(event.getPlayer(), m.getAmount());
@@ -161,10 +164,6 @@ public class MobManagerListener implements Listener {
                                }
                            }
                      }
-                        if (event.getRightClicked() instanceof Villager){
-                            event.setCancelled(true);
-                            return;
-                        }
                     }
                     else {
                         event.getPlayer().sendMessage(Msgs.messages.get("No-Permission-For-Mob-Usage").replace("%player%", event.getPlayer().getName()));
