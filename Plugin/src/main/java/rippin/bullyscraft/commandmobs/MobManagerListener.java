@@ -88,7 +88,7 @@ public class MobManagerListener implements Listener {
 
     @EventHandler (priority = EventPriority.HIGHEST)
     public void onCreatureSpawn(CreatureSpawnEvent event){
-        if (event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.CUSTOM) {
+        if (event.getEntity().hasMetadata("CommandMob")) {
                 event.setCancelled(false);
 
       }
