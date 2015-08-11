@@ -1,12 +1,13 @@
-package rippin.bullyscraft.nms.v1_8_R1.Entities;
+package rippin.bullyscraft.nms.v1_8_R3.Entities;
 
-import net.minecraft.server.v1_8_R1.EntityLiving;
-import net.minecraft.server.v1_8_R1.NBTTagCompound;
-import net.minecraft.server.v1_8_R1.World;
+
+import net.minecraft.server.v1_8_R3.EntityLiving;
+import net.minecraft.server.v1_8_R3.NBTTagCompound;
+import net.minecraft.server.v1_8_R3.World;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_8_R1.CraftWorld;
-import org.bukkit.craftbukkit.v1_8_R1.entity.CraftEntity;
+import org.bukkit.craftbukkit.v1_8_R3.CraftWorld;
+import org.bukkit.craftbukkit.v1_8_R3.entity.CraftEntity;
 import org.bukkit.entity.Entity;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 
@@ -250,7 +251,7 @@ public class EntityUtils {
             //Class craftEntityClass =  Class.forName("org.bukkit.craftbukkit." + parseMinecraftVersion() + ".entity.CraftEntity");
             //Object craftEntity = craftEntityClass.cast(e);
 
-            net.minecraft.server.v1_8_R1.Entity nmsEntity = ((CraftEntity) e).getHandle();
+            net.minecraft.server.v1_8_R3.Entity nmsEntity = ((CraftEntity) e).getHandle();
             //Method handle = craftEntity.getClass().getMethod("getHandle");
             //handle.setAccessible(true);
             //Object nmsEntity = handle.invoke(craftEntity);
@@ -283,7 +284,7 @@ public class EntityUtils {
         }
     }
 
-    public static void setNMSEntityNoAI(net.minecraft.server.v1_8_R1.Entity nmsEntity) {
+    public static void setNMSEntityNoAI(net.minecraft.server.v1_8_R3.Entity nmsEntity) {
         try {
             //Class craftEntityClass =  Class.forName("org.bukkit.craftbukkit." + parseMinecraftVersion() + ".entity.CraftEntity");
             //Object craftEntity = craftEntityClass.cast(e);

@@ -1,11 +1,9 @@
-package rippin.bullyscraft.nms.v1_8_R1.Entities;
+package rippin.bullyscraft.nms.v1_8_R3.Entities;
 
 
-
-
-import net.minecraft.server.v1_8_R1.EntitySkeleton;
-import net.minecraft.server.v1_8_R1.PathfinderGoalSelector;
-import net.minecraft.server.v1_8_R1.World;
+import net.minecraft.server.v1_8_R3.EntitySkeleton;
+import net.minecraft.server.v1_8_R3.PathfinderGoalSelector;
+import net.minecraft.server.v1_8_R3.World;
 
 import java.lang.reflect.Field;
 import java.util.List;

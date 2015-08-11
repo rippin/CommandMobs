@@ -1,7 +1,8 @@
-package rippin.bullyscraft.nms.v1_8_R1.Entities;
+package rippin.bullyscraft.nms.v1_8_R3.Entities;
 
-import net.minecraft.server.v1_8_R1.EntityBat;
-import net.minecraft.server.v1_8_R1.World;
+
+import net.minecraft.server.v1_8_R3.EntityBat;
+import net.minecraft.server.v1_8_R3.World;
 
 public class CustomBat extends EntityBat implements CustomEntity {
 
