@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>CommandMobs-v1_8_R3</artifactId>
+    <name>Command Mobs for v1_8_R3</name>
+    <groupId>com.bullyscraft</groupId>
+    <version>v1_8_R3</version>
+    <packaging>jar</packaging>
+
+    <parent>
+        <groupId>com.bullyscraft</groupId>
+        <artifactId>CommandMobs-parent</artifactId>
+        <version>parent</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+                <groupId>org.spigot</groupId>
+                <artifactId>spigot.jar</artifactId>
+                <version>1.8.8</version>
+            <type>jar</type>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+</project>
