@@ -10,6 +10,7 @@ import org.bukkit.entity.*;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.inventory.EntityEquipment;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.potion.PotionEffect;
 import rippin.bullyscraft.commandmobs.Configs.MobsConfig;
 
@@ -111,6 +112,7 @@ public class Mob {
         Method m = clazz.getMethod("spawnCustomEntity", Location.class, String.class);
 
         LivingEntity ent = (LivingEntity) m.invoke(null, loc, type.toString());
+            ent.setMetadata("CommandMob", new FixedMetadataValue(CommandMobs.instance, ""));
             setEnt(ent);
         } catch (Exception e){
             e.printStackTrace();
@@ -150,6 +152,7 @@ public class Mob {
                 try {
                 if (EntityType.valueOf(vehicle) != null){
                     Entity e = Bukkit.getWorld(loc.getWorld().getName()).spawnEntity(loc, EntityType.valueOf(vehicle));
+                    e.setMetadata("CommandMob", new FixedMetadataValue(CommandMobs.instance, ""));
                     if (e instanceof Horse){
                         if (config.getString("Mobs." + name + ".HorseType") != null){
                            //dont bother checking just take string.
