@@ -11,10 +11,15 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.*;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.world.ChunkUnloadEvent;
+import org.bukkit.scheduler.BukkitTask;
+
+import java.util.List;
 
 
 public class MobManagerListener implements Listener {
     private CommandMobs plugin;
+    private BukkitTask task;
+    private BukkitTask task1;
     public MobManagerListener(CommandMobs plugin){
         this.plugin = plugin;
     }
@@ -33,57 +38,95 @@ public class MobManagerListener implements Listener {
 
     @EventHandler (priority = EventPriority.HIGHEST)
     public void onEntityDamageByEntity(EntityDamageByEntityEvent event){
-        if (event.getEntity() instanceof  LivingEntity && event.getDamager() instanceof Player){
-            Player player = (Player) event.getDamager();
-            for (String key : MobsManager.getActiveMobs()){
+        if (event.getEntity() instanceof  LivingEntity && event.getDamager() instanceof Player) {
+            final Player player = (Player) event.getDamager();
+            for (String key : MobsManager.getActiveMobs()) {
                 String split[] = key.split(":");
                 String uuid = split[0];
-                if (event.getEntity().getUniqueId().toString().equalsIgnoreCase(uuid)){
-                    Mob m = MobsManager.getMobByUUID(uuid);
+                if (event.getEntity().getUniqueId().toString().equalsIgnoreCase(uuid)) {
+                    final Mob m = MobsManager.getMobByUUID(uuid);
                     event.setCancelled(true);
                     if (m == null) {
                         return;
                     }
                     if (m.getPermission() == null || player.hasPermission(m.getPermission())) {
-                        if (m.getAmount() > 0 && VaultHook.hasAmount((Player)event.getDamager(), m.getAmount())) {
+                        if (m.getAmount() > 0 && VaultHook.hasAmount((Player) event.getDamager(), m.getAmount())) {
                             VaultHook.deductAmount(player, m.getAmount());
-                        }
-                        else if (m.getAmount() > 0 && (!VaultHook.hasAmount(player, m.getAmount()))) {
+                        } else if (m.getAmount() > 0 && (!VaultHook.hasAmount(player, m.getAmount()))) {
                             player.sendMessage(Msgs.messages.get("Not-Enough-Money").replace("%player%", player.getName()));
                             return;
                         }
-                        if (m.getCooldownUUIDS().containsKey(player.getUniqueId().toString())){
+                        if (m.getCooldownUUIDS().containsKey(player.getUniqueId().toString())) {
                             long lastTime = m.getCooldownUUIDS().get(player.getUniqueId().toString());
                             long cooldown = (m.getCooldown() * 1000);
-                            if (System.currentTimeMillis() - lastTime < cooldown){
+                            if (System.currentTimeMillis() - lastTime < cooldown) {
                                 return;
                             }
                         }
                         m.getCooldownUUIDS().put(player.getUniqueId().toString(), System.currentTimeMillis());
 
-                        if (m.getSound() != null){
+                        if (m.getSound() != null) {
                             player.playSound(player.getLocation(), m.getSound(), 10, 1);
                         }
-                        if (m.getCommands() != null && !m.getCommands().isEmpty()){
-
+                        if (m.getCommands() != null && !m.getCommands().isEmpty()) {
                             if (m.isCommandAsConsole()) {
-                                for (String cmds : m.getCommands()) {
-                                    Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), cmds.replace("%player%", player.getName()));
+
+                                if (m.getCommandDelay() > 0) {
+                                    final List<String> cmds = m.getCommands();
+                                    task = plugin.getServer().getScheduler().runTaskTimer(plugin, new Runnable() {
+                                        int j = 0;
+
+                                        public void run() {
+                                            if (j < cmds.size()) {
+                                                if (m.getSound() != null){
+                                                    player.playSound(player.getLocation(), m.getSound(), 10, 1);
+                                                }
+                                                Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), cmds.get(j).replace("%player%", player.getName()));
+                                            } else {
+                                                task.cancel();
+                                            }
+                                            ++j;
+                                        }
+                                    },1L, m.getCommandDelay() * 20);
+
+                                } else {
+                                    for (String cmds : m.getCommands()) {
+                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), cmds.replace("%player%", player.getName()));
+                                    }
                                 }
+
                             } else {
-                                for (String cmds : m.getCommands()) {
-                                    Bukkit.getServer().dispatchCommand(player, cmds.replace("%player%", player.getName()));
+                                if (m.getCommandDelay() > 0) {
+                                    final List<String> cmds = m.getCommands();
+                                    task = plugin.getServer().getScheduler().runTaskTimer(plugin, new Runnable() {
+                                        int j = 0;
+
+                                        public void run() {
+                                            if (j < cmds.size()) {
+                                                if (m.getSound() != null){
+                                                    player.playSound(player.getLocation(), m.getSound(), 10, 1);
+                                                }
+                                                Bukkit.getServer().dispatchCommand(player, cmds.get(j).replace("%player%", player.getName()));
+                                            } else {
+                                                task.cancel();
+                                            }
+                                            ++j;
+                                        }
+                                    },1L, m.getCommandDelay() * 20L);
+
+                                } else {
+                                    for (String cmds : m.getCommands()) {
+                                        Bukkit.getServer().dispatchCommand(player, cmds.replace("%player%", player.getName()));
+                                    }
                                 }
                             }
                         }
-                    }
-                    else {
+                    } else {
                         player.sendMessage(Msgs.messages.get("No-Permission-For-Mob-Usage").replace("%player%", player.getName()));
                     }
                 }
             }
         }
-
     }
 
     @EventHandler (priority = EventPriority.HIGHEST)
@@ -122,10 +165,11 @@ public class MobManagerListener implements Listener {
     public void onClick(PlayerInteractEntityEvent event){
         if (event.getRightClicked() instanceof  LivingEntity){
             for (String key : MobsManager.getActiveMobs()){
+                final Player player = event.getPlayer();
                 String split[] = key.split(":");
                 String uuid = split[0];
                 if (event.getRightClicked().getUniqueId().toString().equalsIgnoreCase(uuid)){
-                    Mob m = MobsManager.getMobByUUID(uuid);
+                    final Mob m = MobsManager.getMobByUUID(uuid);
                     if (m == null) {
                         return;
                     }
@@ -152,18 +196,59 @@ public class MobManagerListener implements Listener {
                      if (m.getSound() != null){
                        event.getPlayer().playSound(event.getPlayer().getLocation(), m.getSound(), 10, 1);
                      }
-                     if (m.getCommands() != null && !m.getCommands().isEmpty()){
-
+                        if (m.getCommands() != null && !m.getCommands().isEmpty()) {
                             if (m.isCommandAsConsole()) {
-                            for (String cmds : m.getCommands()) {
-                            Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), cmds.replace("%player%", event.getPlayer().getName()));
-                         }
-                           } else {
-                               for (String cmds : m.getCommands()) {
-                                   Bukkit.getServer().dispatchCommand(event.getPlayer(), cmds.replace("%player%", event.getPlayer().getName()));
-                               }
-                           }
-                     }
+
+                                if (m.getCommandDelay() > 0) {
+                                    final List<String> cmds = m.getCommands();
+                                        task = plugin.getServer().getScheduler().runTaskTimer(plugin, new Runnable() {
+                                            int j = 0;
+
+                                            public void run() {
+                                                if (j < cmds.size()) {
+                                                    if (m.getSound() != null){
+                                                        player.playSound(player.getLocation(), m.getSound(), 10, 1);
+                                                    }
+                                                    Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), cmds.get(j).replace("%player%", player.getName()));
+                                                } else {
+                                                    task.cancel();
+                                                }
+                                                ++j;
+                                            }
+                                        },1L, m.getCommandDelay() * 20);
+
+                                } else {
+                                    for (String cmds : m.getCommands()) {
+                                        Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), cmds.replace("%player%", player.getName()));
+                                    }
+                                }
+
+                            } else {
+                                if (m.getCommandDelay() > 0) {
+                                    final List<String> cmds = m.getCommands();
+                                        task = plugin.getServer().getScheduler().runTaskTimer(plugin, new Runnable() {
+                                            int j = 0;
+
+                                            public void run() {
+                                                if (j < cmds.size()) {
+                                                    if (m.getSound() != null){
+                                                        player.playSound(player.getLocation(), m.getSound(), 10, 1);
+                                                    }
+                                                    Bukkit.getServer().dispatchCommand(player, cmds.get(j).replace("%player%", player.getName()));
+                                                } else {
+                                                    task.cancel();
+                                                }
+                                                ++j;
+                                            }
+                                        },1L, m.getCommandDelay() * 20L);
+
+                                } else {
+                                    for (String cmds : m.getCommands()) {
+                                        Bukkit.getServer().dispatchCommand(player, cmds.replace("%player%", player.getName()));
+                                    }
+                                }
+                            }
+                        }
                     }
                     else {
                         event.getPlayer().sendMessage(Msgs.messages.get("No-Permission-For-Mob-Usage").replace("%player%", event.getPlayer().getName()));

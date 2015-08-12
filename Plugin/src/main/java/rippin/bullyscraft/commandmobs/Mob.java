@@ -39,6 +39,7 @@ public class Mob {
     private boolean commandAsConsole = true;
     private int cooldown;
     private Map<String, Long> cooldownUUIDS = new HashMap<String, Long>();
+    private int commandDelay = 0;
 
     public Mob(String name){
         this.name = name;
@@ -61,6 +62,9 @@ public class Mob {
         }
         else {
             cooldown = 5;
+        }
+        if (config.getInt("Mobs." + name + ".Command-Delay") > 0){
+            commandDelay = config.getInt("Mobs." + name + ".Command-Delay");
         }
 
         if (config.getString("Mobs." + name + ".Weapon") != null)
@@ -373,5 +377,13 @@ public class Mob {
 
     public void setCooldownUUIDS(Map<String, Long> cooldownUUIDS) {
         this.cooldownUUIDS = cooldownUUIDS;
+    }
+
+    public int getCommandDelay() {
+        return commandDelay;
+    }
+
+    public void setCommandDelay(int commandDelay) {
+        this.commandDelay = commandDelay;
     }
 }
