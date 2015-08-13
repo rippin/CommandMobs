@@ -13,13 +13,10 @@ import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.world.ChunkUnloadEvent;
 import org.bukkit.scheduler.BukkitTask;
 
-import java.util.List;
 
 
 public class MobManagerListener implements Listener {
     private CommandMobs plugin;
-    private BukkitTask task;
-    private BukkitTask task1;
     public MobManagerListener(CommandMobs plugin){
         this.plugin = plugin;
     }
@@ -72,23 +69,7 @@ public class MobManagerListener implements Listener {
                             if (m.isCommandAsConsole()) {
 
                                 if (m.getCommandDelay() > 0) {
-                                    final List<String> cmds = m.getCommands();
-                                    task = plugin.getServer().getScheduler().runTaskTimer(plugin, new Runnable() {
-                                        int j = 0;
-
-                                        public void run() {
-                                            if (j < cmds.size()) {
-                                                if (m.getSound() != null){
-                                                    player.playSound(player.getLocation(), m.getSound(), 10, 1);
-                                                }
-                                                Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), cmds.get(j).replace("%player%", player.getName()));
-                                            } else {
-                                                task.cancel();
-                                            }
-                                            ++j;
-                                        }
-                                    },1L, m.getCommandDelay() * 20);
-
+                                    new CommandDelayCountdown(plugin, m, player, Bukkit.getConsoleSender()).startCountdown();
                                 } else {
                                     for (String cmds : m.getCommands()) {
                                         Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), cmds.replace("%player%", player.getName()));
@@ -97,22 +78,7 @@ public class MobManagerListener implements Listener {
 
                             } else {
                                 if (m.getCommandDelay() > 0) {
-                                    final List<String> cmds = m.getCommands();
-                                    task = plugin.getServer().getScheduler().runTaskTimer(plugin, new Runnable() {
-                                        int j = 0;
-
-                                        public void run() {
-                                            if (j < cmds.size()) {
-                                                if (m.getSound() != null){
-                                                    player.playSound(player.getLocation(), m.getSound(), 10, 1);
-                                                }
-                                                Bukkit.getServer().dispatchCommand(player, cmds.get(j).replace("%player%", player.getName()));
-                                            } else {
-                                                task.cancel();
-                                            }
-                                            ++j;
-                                        }
-                                    },1L, m.getCommandDelay() * 20L);
+                                    new CommandDelayCountdown(plugin, m, player, player).startCountdown();
 
                                 } else {
                                     for (String cmds : m.getCommands()) {
@@ -200,22 +166,7 @@ public class MobManagerListener implements Listener {
                             if (m.isCommandAsConsole()) {
 
                                 if (m.getCommandDelay() > 0) {
-                                    final List<String> cmds = m.getCommands();
-                                        task = plugin.getServer().getScheduler().runTaskTimer(plugin, new Runnable() {
-                                            int j = 0;
-
-                                            public void run() {
-                                                if (j < cmds.size()) {
-                                                    if (m.getSound() != null){
-                                                        player.playSound(player.getLocation(), m.getSound(), 10, 1);
-                                                    }
-                                                    Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), cmds.get(j).replace("%player%", player.getName()));
-                                                } else {
-                                                    task.cancel();
-                                                }
-                                                ++j;
-                                            }
-                                        },1L, m.getCommandDelay() * 20);
+                                    new CommandDelayCountdown(plugin, m, player, Bukkit.getConsoleSender()).startCountdown();
 
                                 } else {
                                     for (String cmds : m.getCommands()) {
@@ -225,22 +176,8 @@ public class MobManagerListener implements Listener {
 
                             } else {
                                 if (m.getCommandDelay() > 0) {
-                                    final List<String> cmds = m.getCommands();
-                                        task = plugin.getServer().getScheduler().runTaskTimer(plugin, new Runnable() {
-                                            int j = 0;
 
-                                            public void run() {
-                                                if (j < cmds.size()) {
-                                                    if (m.getSound() != null){
-                                                        player.playSound(player.getLocation(), m.getSound(), 10, 1);
-                                                    }
-                                                    Bukkit.getServer().dispatchCommand(player, cmds.get(j).replace("%player%", player.getName()));
-                                                } else {
-                                                    task.cancel();
-                                                }
-                                                ++j;
-                                            }
-                                        },1L, m.getCommandDelay() * 20L);
+                                    new CommandDelayCountdown(plugin, m, player, player).startCountdown();
 
                                 } else {
                                     for (String cmds : m.getCommands()) {
