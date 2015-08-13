@@ -12,7 +12,6 @@ public class TeleportMobCountdown {
 
     public void startCountdown(){
         plugin.getServer().getScheduler().scheduleSyncRepeatingTask(plugin, new Runnable() {
-            @Override
             public void run() {
              for (Mob m :MobsManager.getAllMobs()){
                  if (m != null) {
