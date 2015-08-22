@@ -7,7 +7,6 @@ import org.bukkit.Sound;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.*;
-import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.inventory.EntityEquipment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.metadata.FixedMetadataValue;
@@ -28,6 +27,7 @@ public class Mob {
     private FileConfiguration config;
     private String type;
     private String vehicle;
+    private String horseType;
     private boolean baby = false;
     private Sound sound;
     private LivingEntity ent;
@@ -81,6 +81,9 @@ public class Mob {
             type = config.getString("Mobs." + name + ".Type");
         if (config.getString("Mobs." + name + ".Vehicle") != null){
             this.vehicle = config.getString("Mobs." + name + ".Vehicle");
+        }
+        if (config.getString("Mobs." + name + ".HorseType") != null){
+            this.horseType = config.getString("Mobs." + name + ".HorseType");
         }
         if (config.getBoolean("Mobs." + name + ".Baby"))
             baby = config.getBoolean("Mobs." + name + ".Baby");
@@ -141,6 +144,13 @@ public class Mob {
           ent.setCustomName(ChatColor.translateAlternateColorCodes('&', displayName));
           ent.setCustomNameVisible(true);
       }
+        if (ent instanceof Horse){
+            if (config.getString("Mobs." + name + ".HorseType") != null){
+                //dont bother checking just take string.
+                Horse.Variant variant = Horse.Variant.valueOf(config.getString("Mobs." + name + ".HorseType"));
+                ((Horse) ent).setVariant(variant);
+            }
+        }
             if (health > 0){
             ent.setMaxHealth(health);
             ent.setHealth(health);
@@ -151,24 +161,6 @@ public class Mob {
                 LivingEntity entVeh = veh.spawnMob(sender);
                 entVeh.setPassenger(ent);
 
-            }
-            else {
-                try {
-                if (EntityType.valueOf(vehicle) != null){
-                    Entity e = Bukkit.getWorld(loc.getWorld().getName()).spawnEntity(loc, EntityType.valueOf(vehicle));
-                    e.setMetadata("CommandMob", new FixedMetadataValue(CommandMobs.instance, ""));
-                    if (e instanceof Horse){
-                        if (config.getString("Mobs." + name + ".HorseType") != null){
-                           //dont bother checking just take string.
-                            Horse.Variant variant = Horse.Variant.valueOf(config.getString("Mobs." + name + ".HorseType"));
-                            ((Horse) e).setVariant(variant);
-                        }
-                    }
-                    e.setPassenger(ent);
-                }
-                } catch (IllegalArgumentException ex){
-                    System.out.println("Not a valid entitytype.");
-                }
             }
         }
         ent.setCanPickupItems(false);
@@ -338,6 +330,25 @@ public class Mob {
         this.amount = amount;
         config.set("Mobs." + name + ".Cost", this.amount);
         MobsConfig.saveFile();
+    }
+
+    public String getVehicle() {
+        return vehicle;
+    }
+
+    public void setVehicle(String vehicle) {
+        this.vehicle = vehicle;
+
+        config.set("Mobs." + name + ".Vehicle", this.vehicle);
+        MobsConfig.saveFile();
+    }
+
+    public String getHorseType() {
+        return horseType;
+    }
+
+    public void setHorseType(String horseType) {
+        this.horseType = horseType;
     }
 
     public Location getLoc() {

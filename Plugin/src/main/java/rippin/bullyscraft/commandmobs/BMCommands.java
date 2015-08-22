@@ -7,6 +7,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Ageable;
+import org.bukkit.entity.Horse;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import rippin.bullyscraft.commandmobs.Configs.ConfigManager;
@@ -225,6 +226,11 @@ public class BMCommands implements CommandExecutor {
                 sender.sendMessage(Msgs.messages.get("Set-Command-Delay").replace("%mobname%", m.getName()));
 
             }
+            else if (args[1].equalsIgnoreCase("setVehicle")){
+                m.setVehicle(args[2]);
+                sender.sendMessage(Msgs.messages.get("Set-Vehicle").replace("%mobname%", m.getName()));
+
+            }
             else if (args[1].equalsIgnoreCase("setcooldown")){
                 m.setCooldown(Integer.parseInt(args[2]));
                 sender.sendMessage(Msgs.messages.get("Set-Cooldown").replace("%mobname%", m.getName()));
@@ -248,6 +254,14 @@ public class BMCommands implements CommandExecutor {
                        }
                     }
                 }
+            else if (args[1].equalsIgnoreCase("setHorseType")) {
+                if (m != null || m.getEnt() != null){
+                    if (m.getEnt() instanceof Horse){
+                        m.setHorseType(args[2]);
+                        sender.sendMessage(Msgs.messages.get("Set-HorseType").replace("%mobname%", args[0]));
+                    }
+                }
+            }
             else if (args[1].equalsIgnoreCase("setCost")){
                 m.setAmount(Integer.parseInt(args[2]));
                 sender.sendMessage(Msgs.messages.get("Set-Cost").replace("%mobname%", m.getName()));
