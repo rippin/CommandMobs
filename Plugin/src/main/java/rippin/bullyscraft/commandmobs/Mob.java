@@ -369,6 +369,7 @@ public class Mob {
     public void setCooldown(int cooldown) {
         this.cooldown = cooldown;
         config.set("Mobs." + name + ".Cooldown", this.cooldown);
+        MobsConfig.saveFile();
     }
 
     public Map<String, Long> getCooldownUUIDS() {
@@ -385,5 +386,7 @@ public class Mob {
 
     public void setCommandDelay(int commandDelay) {
         this.commandDelay = commandDelay;
+        config.set("Command-Delay", this.commandDelay);
+        MobsConfig.saveFile();
     }
 }

@@ -53,7 +53,7 @@ public class BMCommands implements CommandExecutor {
                     commandSender.sendMessage(ChatColor.GREEN + "/cm [name] setName [ args[] ]");
                     commandSender.sendMessage(ChatColor.GREEN + "/cm [name] setType [EntityType]");
                     commandSender.sendMessage(ChatColor.GREEN + "/cm [name] setSound [Sound]");
-                    commandSender.sendMessage(ChatColor.GREEN + "/cm [name] setBaby {Only if ageable}");
+                    commandSender.sendMessage(ChatColor.GREEN + "/cm [name] setBaby true|false {Only if ageable}");
                     commandSender.sendMessage(ChatColor.GREEN + "/cm [name] setCost [integer]");
                     commandSender.sendMessage(ChatColor.GREEN + "/cm [name] setWeapon hand|Material");
                     commandSender.sendMessage(ChatColor.GREEN + "/cm [name] setArmor slot|Material");
@@ -218,6 +218,16 @@ public class BMCommands implements CommandExecutor {
             else if (args[1].equalsIgnoreCase("setSound")){
                 m.setSound(Sound.valueOf(args[2]));
                 sender.sendMessage(Msgs.messages.get("Set-Sound").replace("%mobname%", m.getName()));
+
+            }
+            else if (args[1].equalsIgnoreCase("setCommandDelay")){
+                m.setCommandDelay(Integer.parseInt(args[2]));
+                sender.sendMessage(Msgs.messages.get("Set-Command-Delay").replace("%mobname%", m.getName()));
+
+            }
+            else if (args[1].equalsIgnoreCase("setcooldown")){
+                m.setCooldown(Integer.parseInt(args[2]));
+                sender.sendMessage(Msgs.messages.get("Set-Cooldown").replace("%mobname%", m.getName()));
 
             }
             else if (args[1].equalsIgnoreCase("setCommandSender")){

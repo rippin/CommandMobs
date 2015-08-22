@@ -7,6 +7,7 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
+import org.bukkit.inventory.meta.SkullMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
@@ -30,6 +31,7 @@ public class ParseItems {
         String enchants = "";
         String data = "";
         String color = "";
+        String head = "";
         if (item.getEnchantments().size() > 0){
            enchants = "Enchant:";
             Iterator it = item.getEnchantments().entrySet().iterator();
@@ -52,90 +54,121 @@ public class ParseItems {
               }
             }
         }
+        if (item.getType() == Material.SKULL_ITEM){
+            ItemMeta meta = item.getItemMeta();
+            SkullMeta sMeta = (SkullMeta) meta;
+            if (sMeta.hasOwner()){
+                head = " Head:" + sMeta.getOwner();
+            }
+        }
         return new String(item.getType().toString() + ":"
-                + item.getAmount() + " " + data + enchants  + " " + color);
+                + item.getAmount() + " " + data + head + enchants  + " " + color);
     }
     //ITEM:QUANTITY NAME:name_space Data:data ENCHANT:Sharpness@5 Lore:lore|lore_lore | = space _ = new line
-    @SuppressWarnings("deprecated")
+    @SuppressWarnings("deprecation")
     public static ItemStack parseItems(String s){
-            if (s.contains(" ")){
-                String splitspace[] = s.split("\\s+");
-                ItemStack i;
-                if (splitspace[0].contains(":")) {
-                    String splitamount[] = splitspace[0].split(":");
-                    if (splitspace[1].contains("Data:")){
-                        String split[] = splitspace[1].split(":");
-                        i = new ItemStack(Material.getMaterial(splitamount[0]),
-                                Integer.parseInt(splitamount[1]), (short)0, Byte.parseByte(split[1]));
-                    }
-                    else {
+        if (s.contains(" ")){
+            String splitspace[] = s.split("\\s+");
+            ItemStack i;
+            if (splitspace[0].contains(":")) {
+                String splitamount[] = splitspace[0].split(":");
+                if (splitspace[1].contains("Data:")){
+                    String split[] = splitspace[1].split(":");
+                    i = new ItemStack(Material.getMaterial(splitamount[0]),
+                            Integer.parseInt(splitamount[1]), (short)0, Byte.parseByte(split[1]));
+                }
+                else {
                     i = new ItemStack(Material.getMaterial(splitamount[0]), Integer.parseInt(splitamount[1]));
-                    }
                 }
+            }
 
-                else{
-                    if (splitspace[1].contains("Data:")){
-                        String split[] = splitspace[1].split(":");
-                        i = new ItemStack(Material.getMaterial(splitspace[0]), 1, (short)0, Byte.parseByte(split[1]));
+            else{
+                if (splitspace[1].contains("Data:")){
+                    String split[] = splitspace[1].split(":");
+                    i = new ItemStack(Material.getMaterial(splitspace[0]), 1, (short)0, Byte.parseByte(split[1]));
+                }
+                else {
+                    i = new ItemStack(Material.getMaterial(splitspace[0]));
+                }
+            }
+            for (int j = 1; j < splitspace.length; j++){
+                ItemMeta meta = i.getItemMeta();
+                if (splitspace[j].toLowerCase().contains("Name".toLowerCase())){
+                    String splitName[] = splitspace[j].split(":");
+                    splitName[1] = splitName[1].replace("_", " ");
+
+                    meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', splitName[1]));
+                    i.setItemMeta(meta);
+                }
+                else if (splitspace[j].toLowerCase().contains("Lore".toLowerCase())){
+                    meta = i.getItemMeta();
+                    String splitLore[] = splitspace[j].split(":");
+                    splitLore[1] = splitLore[1].replace("|", " ");
+                    splitLore[1] = ChatColor.translateAlternateColorCodes('&', splitLore[1]);
+                    if (splitLore[1].contains("_")){
+                        String splitLoreSpace[] = splitLore[1].split("_");
+                        meta.setLore(Arrays.asList(splitLoreSpace));
                     }
                     else {
-                    i = new ItemStack(Material.getMaterial(splitspace[0]));
+                        String splitLoreSpace[] = new String[1];
+                        splitLoreSpace[0] = splitLore[1];
+                        meta.setLore(Arrays.asList(splitLoreSpace));
                     }
+                    i.setItemMeta(meta);
                 }
-                for (int j = 1; j < splitspace.length; j++){
-                    ItemMeta meta = i.getItemMeta();
-                    if (splitspace[j].toLowerCase().contains("Name".toLowerCase())){
-                        String splitName[] = splitspace[j].split(":");
-                        splitName[1] = splitName[1].replace("_", " ");
+                else if (splitspace[j].toLowerCase().contains("Head".toLowerCase())){
+                    meta = i.getItemMeta();
+                    String splitHead[] = splitspace[j].split(":");
+                    if (i.getType() == Material.SKULL_ITEM){
 
-                        meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', splitName[1]));
-                        i.setItemMeta(meta);
-                    }
-                    else if (splitspace[j].toLowerCase().contains("Lore".toLowerCase())){
-                        meta = i.getItemMeta();
-                        String splitLore[] = splitspace[j].split(":");
-                        splitLore[1] = splitLore[1].replace("|", " ");
-                        splitLore[1] = ChatColor.translateAlternateColorCodes('&', splitLore[1]);
-                        if (splitLore[1].contains("_")){
-                            String splitLoreSpace[] = splitLore[1].split("_");
-                            meta.setLore(Arrays.asList(splitLoreSpace));
-                        }
-                        else {
-                            String splitLoreSpace[] = new String[1];
-                            splitLoreSpace[0] = splitLore[1];
-                            meta.setLore(Arrays.asList(splitLoreSpace));
-                        }
-                        i.setItemMeta(meta);
-                    }
-                    else if (splitspace[j].toLowerCase().contains("Enchant".toLowerCase())){
-                        String splitEnchant[] = splitspace[j].split(":");
-                        String splitLevel[] = splitEnchant[1].split("@");
-                        i.addUnsafeEnchantment(Enchantment.getByName(getOfficialEnchantmentName(splitLevel[0])), Integer.parseInt(splitLevel[1]));
-                    }
-                    else if (splitspace[j].toLowerCase().contains("LeatherColor".toLowerCase())){
-                        if (isArmor(i.toString())) {
-                            if (i.getType().toString().toLowerCase().contains("leather")){
-                                LeatherArmorMeta leatherArmorMeta = (LeatherArmorMeta) i.getItemMeta();
-                                String splitColor[] = splitspace[j].split(":");
-                                leatherArmorMeta.setColor(getFromString(splitColor[1]));
-                                i.setItemMeta(leatherArmorMeta);
+                        SkullMeta sMeta = (SkullMeta) meta;
+                        sMeta.setOwner(splitHead[1]);
+                        i.setItemMeta(sMeta);
 
-                            }
+                    }
+
+                }
+                else if (splitspace[j].toLowerCase().contains("Enchant".toLowerCase())){
+                    String splitEnchant[] = splitspace[j].split(":");
+                    String splitLevel[] = splitEnchant[1].split("@");
+                    i.addUnsafeEnchantment(Enchantment.getByName(getOfficialEnchantmentName(splitLevel[0])), Integer.parseInt(splitLevel[1]));
+                }
+                else if (splitspace[j].toLowerCase().contains("LeatherColor".toLowerCase())){
+                    if (isArmor(i.toString())) {
+                        if (i.getType().toString().toLowerCase().contains("leather")){
+                            LeatherArmorMeta leatherArmorMeta = (LeatherArmorMeta) i.getItemMeta();
+                            String splitColor[] = splitspace[j].split(":");
+                            leatherArmorMeta.setColor(getFromString(splitColor[1]));
+                            i.setItemMeta(leatherArmorMeta);
+
                         }
                     }
                 }
-                return i;
             }
-            else{
-                if (s.contains(":")){
+            return i;
+        }
+        else{
+            if (s.contains(":")){
+                if (s.substring(0,1).matches("[0-9]")){
+                    String split[] = s.split(":");
+                    return new ItemStack(Material.getMaterial(Integer.parseInt(split[0])), Integer.parseInt(split[1]));
+                }
+                else {
                     String split[] = s.split(":");
                     return new ItemStack(Material.getMaterial(split[0]), Integer.parseInt(split[1]));
                 }
-                else{
+            }
+            else{
+                if (s.substring(0,1).matches("[0-9]")){
+                    return new ItemStack(Material.getMaterial(Integer.parseInt(s)));
+                }
+                else {
                     return new ItemStack(Material.getMaterial(s));
                 }
             }
+        }
     }
+
 
     public static Set<PotionEffect> parsePotions(List<String> potions){
         Set<PotionEffect> parsedPotions = new HashSet<PotionEffect>();
