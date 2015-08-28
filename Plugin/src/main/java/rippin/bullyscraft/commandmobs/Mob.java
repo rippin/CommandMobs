@@ -31,6 +31,7 @@ public class Mob {
     private boolean baby = false;
     private Sound sound;
     private LivingEntity ent;
+    private LivingEntity vehent;
     private List<String> commands = new ArrayList<String>();
     private String permission;
     private int amount;
@@ -158,8 +159,14 @@ public class Mob {
         if (vehicle != null){
             if (MobsManager.isMob(vehicle)){
                 Mob veh = MobsManager.getMob(vehicle);
-                LivingEntity entVeh = veh.spawnMob(sender);
-                entVeh.setPassenger(ent);
+                if (veh.getEnt() == null) {
+                    LivingEntity entVeh = veh.spawnMob(sender);
+                    vehent = entVeh;
+                }
+                else {
+                    vehent = veh.getEnt();
+                }
+                vehent.setPassenger(getEnt());
 
             }
         }
@@ -337,8 +344,10 @@ public class Mob {
     }
 
     public void setVehicle(String vehicle) {
+        MobsManager.removeActiveMob(this.vehicle);
+        MobsManager.removeActiveMob(this.getName());
         this.vehicle = vehicle;
-
+        this.spawnMob(Bukkit.getConsoleSender());
         config.set("Mobs." + name + ".Vehicle", this.vehicle);
         MobsConfig.saveFile();
     }
@@ -349,6 +358,12 @@ public class Mob {
 
     public void setHorseType(String horseType) {
         this.horseType = horseType;
+        MobsManager.removeActiveMob(this.getName());
+        this.spawnMob(Bukkit.getConsoleSender());
+
+        config.set("Mobs." + name + ".HorseType", this.horseType);
+        MobsConfig.saveFile();
+
     }
 
     public Location getLoc() {
@@ -397,7 +412,7 @@ public class Mob {
 
     public void setCommandDelay(int commandDelay) {
         this.commandDelay = commandDelay;
-        config.set("Command-Delay", this.commandDelay);
+        config.set("Mobs." + name + ".Command-Delay", this.commandDelay);
         MobsConfig.saveFile();
     }
 }

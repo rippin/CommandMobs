@@ -22,9 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="CommandMobs-v1_8_R3" />
         <module name="v1_7_R3" />
         <module name="v1_7_R4" />
         <module name="v1_8_R1" />
+        <module name="v1_8_R3" />
       </profile>
       <profile default="false" name="Annotation profile for Plugin" enabled="true">
         <sourceOutputDir name="..\target\generated-sources\annotations" />
@@ -34,6 +36,13 @@
         <module name="Plugin" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CommandMobs" target="1.5" />
+      <module name="CommandMobs-v1_8_R3" target="1.5" />
+      <module name="Plugin" target="1.5" />
+      <module name="v1_7_R4" target="1.5" />
+      <module name="v1_8_R1" target="1.5" />
+      <module name="v1_8_R3" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
-
